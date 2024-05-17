@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.about-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2880b9;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #2880b9;  /* Memberikan sedikit gaya pada gambar */
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;  /* Mengubah ukuran ikon menjadi lebih kecil */
+    height: 20px;  /* Mengubah ukuran ikon menjadi lebih kecil */
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.back {
+    display: inline-block;
+    background-color: aqua;
+    color: white;
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.back:hover {
+    background-color: #007a7a;
+    transform: scale(1.05);
+}

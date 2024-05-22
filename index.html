@@ -5,17 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum Forms dan Links</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('aset/morning.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <section>
         <div class="box">
-            <h3>Praktikum Forms dan Links</h3>
+            <h3>ADITYA WIRAJAYA PERMONO</h3>
         </div>
-        <p><strong>Berikut adalah contoh pemakaian form dan link</strong></p>
-        <div class="btn">
-            <a href="form.html" class="pendaftaran">Form</a>
+        <p class="welcome-message" id="greeting"></p>
+        <p><strong>PILIHAN MENU</strong></p>
+        <div class="btn-container">
             <a href="about_me.html" class="pendaftaran">About Me</a>
+            <a href="services.html" class="pendaftaran">Services</a>
+            <a href="contact.html" class="pendaftaran">Contact</a>
         </div>
+        <div class="jam" id="clock"></div>
+        <div class="tanggal" id="tanggal"></div>
     </section>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        function updateDate() {
+            var now = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var dateString = now.toLocaleDateString('en-US', options);
+            document.getElementById('tanggal').textContent = dateString;
+        }
+
+        function updateGreeting() {
+            var now = new Date();
+            var hours = now.getHours();
+            var greeting = "";
+            if (hours < 12) {
+                greeting = "Selamat pagi!";
+            } else if (hours < 18) {
+                greeting = "Selamat sore!";
+            } else {
+                greeting = "Selamat malam!";
+            }
+            document.getElementById('greeting').textContent = greeting;
+        }
+
+        function updateBackground() {
+            var now = new Date();
+            var hours = now.getHours();
+            var body = document.querySelector('body');
+            if (hours < 12) {
+                body.style.backgroundImage = "url('aset/morning.jpg')";
+            } else if (hours < 18) {
+                body.style.backgroundImage = "url('aset/afternoon.jpg')";
+            } else {
+                body.style.backgroundImage = "url('aset/night.jpg')";
+            }
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+        setInterval(updateDate, 1000 * 60 * 60 * 24);
+        updateDate();
+        setInterval(updateGreeting, 1000 * 60);
+        updateGreeting();
+        setInterval(updateBackground, 1000 * 60 * 60);
+        updateBackground();
+    </script>
 </body>
 </html>

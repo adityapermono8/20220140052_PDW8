@@ -12,13 +12,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #fdfdfd; /* Ubah warna latar belakang */
+    background-color: #fdfdfd;
 }
 
 section {
     max-width: 800px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Ubah opasitas dan tambahkan warna latar belakang */
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ section {
 section p {
     padding: 15px;
     font-size: 1.2em;
-    background-color: #e8f4f8;
+    background-color: #e8f4f8; 
     margin: 0;
     border-bottom: 1px solid #ddd;
 }
